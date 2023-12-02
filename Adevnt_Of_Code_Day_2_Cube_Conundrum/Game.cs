@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Advent_Of_Code_Day_2_Cube_Conundrum
+﻿namespace Advent_Of_Code_Day_2_Cube_Conundrum
 {
     public class Game
     {
        
         public int Id { get; set; }
         public bool IsPossible { get; set; }
-
         public int PowerOfSet {  get; set; }
 
         public Game(int id,string game)
@@ -27,9 +19,8 @@ namespace Advent_Of_Code_Day_2_Cube_Conundrum
         {
             List<Set> sets = new List<Set>();
             var setsToTreat = game.Split(';');
-            foreach (var set in setsToTreat) { 
+            foreach (var set in setsToTreat)  
                 sets.Add(new Set(set));
-            }
             return sets;
         }
 
@@ -45,8 +36,6 @@ namespace Advent_Of_Code_Day_2_Cube_Conundrum
                else 
                     IsPossible = true;
             }
-            
-       
         }
 
         private int GettingPowerOfSets(List<Set> sets)
@@ -67,7 +56,6 @@ namespace Advent_Of_Code_Day_2_Cube_Conundrum
             }
             power = maxRed * maxGreen * maxBlue;
             return power;
-
         }
     }
 }
