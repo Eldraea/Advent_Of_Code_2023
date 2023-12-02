@@ -9,7 +9,7 @@ PartTwo(filename);
 void PartOne(string filename)
 {
     if (File.Exists(filename))
-      Console.WriteLine("The sum of games possible is equal to " + SumOfGameImpossible(games));
+      Console.WriteLine("The sum of games possible is equal to " + SumOfGamePossible(games));
 }
 
 void PartTwo(string filename)
@@ -31,7 +31,7 @@ List<Game> GettingTheListOfGames(string filename)
     return games;
 }
 
-int SumOfGameImpossible(List<Game> games)
+int SumOfGamePossible(List<Game> games)
 {
     int sum = 0;
     foreach(Game game in games)
